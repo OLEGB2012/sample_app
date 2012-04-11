@@ -32,6 +32,7 @@ group :test do
   #gem 'capybara', '1.1.2'
   gem 'factory_girl_rails' #, '1.4.0'
   #gem 'cucumber-rails'
+ gem 'database_cleaner'
 end
 
 group :production do
