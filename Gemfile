@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.2'
 gem 'bootstrap-sass', '2.0.0'
 gem 'bcrypt-ruby', '3.0.1'
+gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 
 group :development, :test do
@@ -29,7 +32,6 @@ group :test do
   #gem 'capybara', '1.1.2'
   gem 'factory_girl_rails' #, '1.4.0'
   #gem 'cucumber-rails'
-  #gem 'database_cleaner'
 end
 
 group :production do
