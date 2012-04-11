@@ -90,10 +90,24 @@ describe "Authentication" do
           fill_in "Password", with: user.password
           click_button "Sign in"
         end
-
+        
         describe "after signing in" do
+          
           it "should render the desired protected page" do
             page.should have_selector('title', text: 'Edit user')
+          end
+          
+          describe "when signing in again" do
+            before do
+              visit signin_path
+              fill_in "Email",    with: user.email
+              fill_in "Password", with: user.password
+              click_button "Sign in"
+            end
+            
+            it "should render the default (profile) page" do
+              page.should have_selector('title', text: user.name)
+            end
           end
         end
       end
